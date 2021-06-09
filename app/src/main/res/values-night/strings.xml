@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="Settlement_history">Здесь должна сохраняться история расчетов</string>
+    <string name="hint_0">0</string>
+    <string name="ac">AC</string>
+    <string name="c">C</string>
+    <string name="percent">%</string>
+    <string name="division">/</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="multiplication">*</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="subtraction">-</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="addition">+</string>
+    <string name="_0">0</string>
+    <string name="dot">,</string>
+    <string name="equal">=</string>
+
+    <string name="my_style_calc_button_numeral">My style numeral</string>
+    <string name="my_style_calc_button_sign">My style sign</string>
+    <string name="material_light">Material light</string>
+    <string name="material_dark">Material dark</string>
+    <string name="choice_of_theme">choice_of_theme</string>
+    <string name="theme">light/dark</string>
+    <string name="_return">BACK</string>
+
+
+</resources>
