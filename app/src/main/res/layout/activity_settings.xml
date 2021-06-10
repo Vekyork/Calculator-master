@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sea"
+    android:background="@drawable/wood_texture"
     android:orientation="vertical"
     android:padding="@dimen/default_margin"
     tools:context=".SettingsActivity">
