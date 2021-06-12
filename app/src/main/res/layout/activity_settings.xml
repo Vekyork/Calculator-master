@@ -8,6 +8,11 @@
     android:padding="@dimen/default_margin"
     tools:context=".SettingsActivity">
 
+    <TextView
+        android:id="txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <RadioGroup
         android:id="@+id/radioButtons"
         android:layout_width="match_parent"
@@ -18,6 +23,18 @@
         android:padding="@dimen/default_margin"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/authorized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autorize" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/not_authorized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reject" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialLight"

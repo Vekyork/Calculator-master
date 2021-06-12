@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent runSettings = new Intent(MainActivity.this,
                         SettingsActivity.class);
                 runSettings.putExtra(SettingsActivity.APP_THEME, "Hello, world!!!");
+                runSettings.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //// Метод стартует активити, указанную в интенте
                 startActivity(runSettings);
             }

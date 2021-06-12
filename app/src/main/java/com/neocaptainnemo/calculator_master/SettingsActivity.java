@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.neocaptainnemo.calculator_master.R;
 import com.google.android.material.radiobutton.MaterialRadioButton;
+
+import org.w3c.dom.Text;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -23,6 +26,15 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTheme(getAppTheme(R.style.AppThemeLight));
         setContentView(R.layout.activity_settings);
+        TextView textView = findViewById(R.id.txt);
+        String value = getIntent().getStringExtra(APP_THEME);
+        textView.setText(value);
+        findViewById(R.id.authorized).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         initThemeChooser();
 
         Button btnReturn = findViewById(R.id.btnReturn);
@@ -32,6 +44,12 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
 // Метод finish() завершает активити
                 finish();
+            }
+        });
+        findViewById(R.id.not_authorized).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
