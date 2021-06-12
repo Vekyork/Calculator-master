@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView text; //поле для ввода расчетов
     private static final String KEY_CALCULATOR = "Calculator";
+    public static final int LOGIN_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,16 +103,16 @@ public class MainActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//// Чтобы стартовать активити, надо подготовить интент
-//// В данном случае это будет явный интент, поскольку здесь
-//передаётся класс активити
+// Чтобы стартовать активити, нужно подготовить интент
+// В данном случае это будет явный интент, поскольку здесь передаётся класс активити
                 Intent runSettings = new Intent(MainActivity.this,
                         SettingsActivity.class);
-                runSettings.putExtra(SettingsActivity.APP_THEME, "Hello, world!!!");
+                runSettings.putExtra(SettingsActivity.APP_THEME, "Необходимо авторизоваться!");
                 runSettings.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//// Метод стартует активити, указанную в интенте
-                startActivity(runSettings);
+// Метод стартует активити, указанную в интенте
+                startActivityForResult(runSettings, LOGIN_REQUEST);
             }
         });
+
     }
 }
