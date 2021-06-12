@@ -13,7 +13,7 @@ import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private static final String APP_THEME = "Theme_Calculator";
+    public static final String APP_THEME = "Theme_Calculator";
 
     private static final int APP_THEME_LIGHT_CODE_STYLE = 0;
     private static final int APP_THEME_DARK_CODE_STYLE = 1;
