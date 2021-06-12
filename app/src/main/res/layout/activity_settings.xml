@@ -9,7 +9,7 @@
     tools:context=".SettingsActivity">
 
     <TextView
-        android:id="txt"
+        android:id="@id/authorized"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -28,13 +28,13 @@
             android:id="@+id/authorized"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Autorize" />
+            android:text="@string/Authorize" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/not_authorized"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reject" />
+            android:text="@string/Reject" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialLight"

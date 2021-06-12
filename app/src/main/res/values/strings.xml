@@ -29,6 +29,8 @@
     <string name="choice_of_theme">choice_of_theme</string>
     <string name="theme">light/dark</string>
     <string name="_return">BACK</string>
+    <string name="Authorize">Authorize</string>
+    <string name="Reject">Reject</string>
 
 
 </resources>

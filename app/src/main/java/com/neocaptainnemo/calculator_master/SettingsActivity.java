@@ -36,7 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent resultIntent = new Intent();
-                resultIntent.putExtra(KEY_RESULT, "Autorized");
+                resultIntent.putExtra(KEY_RESULT, "Вы авторизованы");
                 setResult(Activity.RESULT_OK, resultIntent);
                 finish();
             }

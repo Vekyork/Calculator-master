@@ -29,4 +29,6 @@
     <string name="material_dark">Material dark</string>
     <string name="choice_of_theme">choice_of_theme</string>
     <string name="theme">light/dark</string>
+    <string name="Authorize">Authorize</string>
+    <string name="Reject">Reject</string>
 </resources>
