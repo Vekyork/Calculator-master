@@ -19,7 +19,7 @@ import org.w3c.dom.Text;
 public class SettingsActivity extends AppCompatActivity {
 
     public static final String APP_THEME = "Theme_Calculator";
-    public static final String KEY_RESULT = "KEY_RESULT";
+//    public static final String KEY_RESULT = "KEY_RESULT";
 
     private static final int APP_THEME_LIGHT_CODE_STYLE = 0;
     private static final int APP_THEME_DARK_CODE_STYLE = 1;
@@ -36,7 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent resultIntent = new Intent();
-                resultIntent.putExtra(KEY_RESULT, "Вы авторизованы");
+//                resultIntent.putExtra(KEY_RESULT, "Вы авторизованы");
                 setResult(Activity.RESULT_OK, resultIntent);
                 finish();
             }
@@ -52,14 +52,14 @@ public class SettingsActivity extends AppCompatActivity {
                 finish();
             }
         });
-        findViewById(R.id.not_authorized).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setResult(Activity.RESULT_CANCELED);
-                finish();
+//        findViewById(R.id.not_authorized).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setResult(Activity.RESULT_CANCELED);
+//                finish();
             }
-        });
-    }
+//        });
+//    }
 //инициализация кнопок
     private void initThemeChooser() {
         initRadioButton(findViewById(R.id.radioButtonMaterialLight),

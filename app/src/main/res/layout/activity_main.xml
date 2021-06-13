@@ -40,10 +40,10 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_Login"
-                style="@style/my_style_calc_button_sign"
-                android:text="Login" />
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/button_Login"-->
+<!--                style="@style/my_style_calc_button_sign"-->
+<!--                android:text="Login" />-->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_AC"

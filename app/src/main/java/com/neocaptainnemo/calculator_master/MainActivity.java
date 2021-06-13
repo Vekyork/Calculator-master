@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     CalculatorModel calculator;
 
     private TextView text; //поле для ввода расчетов
-    private static final String KEY_CALCULATOR = "Calculator";
-    public static final int LOGIN_REQUEST = 1;
+    private static final String KEY_CALCULATOR = "КАЛЬКУЛЯТОР";
+//    public static final int LOGIN_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         int[] actionsIds = new int[]{
+//                R.id.button_Login,
                 R.id.button_AC,
                 R.id.button_C,
                 R.id.button_addition,
@@ -110,23 +111,23 @@ public class MainActivity extends AppCompatActivity {
 // В данном случае это будет явный интент, поскольку здесь передаётся класс активити
                 Intent runSettings = new Intent(MainActivity.this,
                         SettingsActivity.class);
-                runSettings.putExtra(SettingsActivity.APP_THEME, "Необходимо авторизоваться!");
+//                runSettings.putExtra(SettingsActivity.APP_THEME, "Необходимо авторизоваться!");
                 runSettings.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 // Метод стартует активити, указанную в интенте
-                startActivityForResult(runSettings, LOGIN_REQUEST);
+//                startActivityForResult(runSettings, LOGIN_REQUEST);
             }
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == LOGIN_REQUEST){
-            if (resultCode == Activity.RESULT_OK){
-                if (data!= null){
-                    Toast.makeText(this, data.getStringExtra(SettingsActivity.KEY_RESULT), Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == LOGIN_REQUEST){
+//            if (resultCode == Activity.RESULT_OK){
+//                if (data!= null){
+//                    Toast.makeText(this, data.getStringExtra(SettingsActivity.KEY_RESULT), Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        }
+//    }
 }
