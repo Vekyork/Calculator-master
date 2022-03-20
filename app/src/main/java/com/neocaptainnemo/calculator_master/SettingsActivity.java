@@ -27,12 +27,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         Button btnReturn = findViewById(R.id.btnReturn);
 
-        btnReturn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnReturn.setOnClickListener(v -> {
 // Метод finish() завершает активити
-                finish();
-            }
+            finish();
         });
     }
 //инициализация кнопок
@@ -48,14 +45,11 @@ public class SettingsActivity extends AppCompatActivity {
 
     // Все инициализации кнопок очень похожи, поэтому создадим метод для переиспользования
     private void initRadioButton(View button, final int codeStyle) {
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // сохраним настройки
-                setAppTheme(codeStyle);
-                // пересоздадим активити, чтобы тема применилась
-                recreate();
-            }
+        button.setOnClickListener(v -> {
+            // сохраним настройки
+            setAppTheme(codeStyle);
+            // пересоздадим активити, чтобы тема применилась
+            recreate();
         });
     }
 

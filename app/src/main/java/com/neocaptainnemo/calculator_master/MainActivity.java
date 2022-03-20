@@ -57,27 +57,21 @@ public class MainActivity extends AppCompatActivity {
 
         calculator = new CalculatorModel();
 
-        View.OnClickListener numberButtonClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculator.onNumPressed(view.getId());
-                text.setText(calculator.getText());
-            }
+        View.OnClickListener numberButtonClickListener = view -> {
+            calculator.onNumPressed(view.getId());
+            text.setText(calculator.getText());
         };
 
-        View.OnClickListener actionButtonOnclickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculator.onActionPressed(view.getId());
-                text.setText(calculator.getText());
-            }
+        View.OnClickListener actionButtonOnclickListener = view -> {
+            calculator.onActionPressed(view.getId());
+            text.setText(calculator.getText());
         };
-        for (int i = 0; i < numberIds.length; i++) {
-            findViewById(numberIds[i]).setOnClickListener(numberButtonClickListener);
+        for (int numberId : numberIds) {
+            findViewById(numberId).setOnClickListener(numberButtonClickListener);
         }
 
-        for (int i = 0; i < actionsIds.length; i++) {
-            findViewById(actionsIds[i]).setOnClickListener(actionButtonOnclickListener);
+        for (int actionsId : actionsIds) {
+            findViewById(actionsId).setOnClickListener(actionButtonOnclickListener);
         }
     }
 
@@ -92,24 +86,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
-        calculator = (CalculatorModel) instanceState.getParcelable(KEY_CALCULATOR);
+        calculator = instanceState.getParcelable(KEY_CALCULATOR);
         text.setText(calculator.getText());
     }
 
     //обработка кнопки
     private void initView() {
         Button btnSettings = findViewById(R.id.button_choice_of_theme);
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnSettings.setOnClickListener(v -> {
 //// Чтобы стартовать активити, надо подготовить интент
 //// В данном случае это будет явный интент, поскольку здесь
 //передаётся класс активити
-                Intent runSettings = new Intent(MainActivity.this,
-                        SettingsActivity.class);
+            Intent runSettings = new Intent(MainActivity.this,
+                    SettingsActivity.class);
 //// Метод стартует активити, указанную в интенте
-                startActivity(runSettings);
-            }
+            startActivity(runSettings);
         });
     }
 }

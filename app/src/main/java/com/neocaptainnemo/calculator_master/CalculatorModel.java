@@ -1,9 +1,8 @@
 package com.neocaptainnemo.calculator_master;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import com.neocaptainnemo.calculator_master.R;
 
 public class CalculatorModel implements Parcelable {
     private int firstArg;
@@ -37,6 +36,7 @@ public class CalculatorModel implements Parcelable {
         actionSelected = in.readInt();
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void onActionPressed(int actionId) {
         if (actionId == R.id.button_equal && state == State.SECOND_ARG_INPUT && INPUT_STR.length() > 0) {
             secondArg = Integer.parseInt(INPUT_STR.toString());
@@ -74,6 +74,7 @@ public class CalculatorModel implements Parcelable {
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void onNumPressed(int buttonId) {
 
         if (state == State.RESULT_SHOW) {
@@ -143,13 +144,14 @@ public class CalculatorModel implements Parcelable {
                         .append(' ')
                         .append(secondArg)
                         .append(" = ")
-                        .append(INPUT_STR.toString())
+                        .append(INPUT_STR)
                         .toString();
             default:
                 return INPUT_STR.toString();
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     private char getOperationChar() {
         switch (actionSelected) {
             case R.id.button_percent:
